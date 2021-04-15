@@ -1,6 +1,8 @@
 # 2021/4/15
 ### picker view自定义组件
+
 ```
+//tsx
 import Taro from '@tarojs/taro'
 import {View, PickerView, PickerViewColumn} from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
@@ -70,5 +72,42 @@ export default class PagePicker extends Taro.Component<any,any> {
             </View>
         )
     }
+}
+
+//sass
+picker-view{
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  //background-color: #bbffaa;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  //border-radius: 10% 10% 0 0;
+  color: black;
+  //display: none;
+}
+picker-view-column{
+  border-radius: 10% 10% 0 0;
+  color: black;
+  font-size: 110%;
+  //background-color: pink;
+}
+//设置中间选中框的样式
+.pickered{
+  width: 50%;
+  //height: 96rpx;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-image: linear-gradient(to right,#FBFBFB,#FFAC30,#FBFBFB) 1 1;
+  margin-left:25%;
+}
+.searcha{
+  background-color: pink;
+
 }
 ```
