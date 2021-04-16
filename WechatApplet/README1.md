@@ -35,5 +35,5 @@ array.map(function(currentValue, index, arr), thisArg)
 >function(currentValue, index, arr)：必须。为一个函数，数组中的每个元素都会执行这个函数。其中函数参数：  
 >>currentValue：必须。当前元素的的值。  
 >>index：可选。当前元素的索引。  
->>arr：可选。当前元素属于的数组对象本身。(原数组)<<               
-如果 thisArg 参数有值，则每次 callback 函数被调用的时候，this 都会指向 thisArg 参数上的这个对象。如果省略了 thisArg 参数,或者赋值为 null 或 undefined，则 this 指向全局对象 。
+>>arr：可选。当前元素属于的数组对象本身。(原数组)               
+>>>如果 thisArg 参数有值，则每次 callback 函数被调用的时候，this 都会指向 thisArg 参数上的这个对象。如果省略了 thisArg 参数,或者赋值为 null 或 undefined，则 this 指向全局对象 。
