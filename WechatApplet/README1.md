@@ -1,4 +1,4 @@
-# bind()函数
+## bind()函数
 >语法：function.bind(thisArg[, arg1[, arg2[, ...]]])  
 >thisArg 当绑定函数被调用时，该参数会作为原函数运行时的 this 指向。当使用 new 操作符调用绑定函数时，该参数无效。  
 >arg1, arg2, … （可选）当绑定函数被调用时，这些参数加上绑定函数本身的参数会按照顺序作为原函数运行时的参数
@@ -26,3 +26,13 @@ var _fn = fn.bind(null, 10);
 var ans = _fn(20, 30); // 60
 
 ```
+
+## map()函数
+map()方法返回一个新的数组，数组中的元素为原始数组调用函数处理后的值,map()不会改变原数组  
+```
+array.map(function(currentValue, index, arr), thisIndex)
+```
+>function(currentValue, index, arr)：必须。为一个函数，数组中的每个元素都会执行这个函数。其中函数参数：  
+>>currentValue：必须。当前元素的的值。  
+>>index：可选。当前元素的索引。  
+>>arr：可选。当前元素属于的数组对象。  
