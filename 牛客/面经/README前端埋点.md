@@ -4,13 +4,24 @@
 
 ## 可埋点数据
 >type - 上报类型  
->appid - 设备id  
->screen - 屏幕信息  
->userAgent - 浏览器信息  
->userInfo - 用户身份信息  
->timestamp - 上报时间  
->document.referrer - 访问来源  
+appid - 设备id  
+screen - 屏幕信息  
+userAgent - 浏览器信息  
+userInfo - 用户身份信息  
+timestamp - 上报时间  
+document.referrer - 访问来源  
 action - 上报事件的动作类型  
 element - 触发上报的元素  
 地理位置,访问渠道  
 >以及其他自定义数据params等等  
+
+### 埋点方案
+**前端埋点大致分为：代码埋点、可视化埋点、无痕埋点三种。**
+#### 代码埋点
+**代码埋点也叫手动埋点属于侵入式埋点，由开发手动在代码内植入预埋点，完全由开发控制埋点的位置时间和触发机制。**
+*使用第三方sdk埋点*
+>如百度统计、友盟、TalkingData、Google Analytics、Sensors Analytics等都提供了这一方案。
+
+使用相对简单，在APP或者界面初始化的时候，初始化第三方数据分析服务商的SDK，然后在某个事件发生时就调用SDK里面相应的数据发送接口发送数据。例如，我们想统计APP里面某个按钮的点击次数，则在APP的某个按钮被点击时，可以在这个按钮对应的 OnClick 函数里面调用SDK提供的数据发送接口来发送数据。
+除此针对特定需求也可以统一封装数据上报通用sdk，各页面各业务模块按需调用，同时埋点的形式也是多种多样的
+*基于事件点击埋点*
