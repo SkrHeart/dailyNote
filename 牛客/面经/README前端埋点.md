@@ -3,15 +3,15 @@
 >基于埋点数据进行用户行为分析，可以得到包含页面点击量、用户访问量、用户访问路径、用户转化率、导流转化率、用户访问时长和用户访问内容分析等重要数据。
 
 ## 可埋点数据
-type - 上报类型
-appid - 设备id
-screen - 屏幕信息
-userAgent - 浏览器信息
-userInfo - 用户身份信息
-timestamp - 上报时间
-document.referrer - 访问来源
+>type - 上报类型
+>appid - 设备id
+>screen - 屏幕信息
+>userAgent - 浏览器信息
+>userInfo - 用户身份信息
+>timestamp - 上报时间
+>document.referrer - 访问来源
 action - 上报事件的动作类型
 element - 触发上报的元素
 地理位置
 访问渠道
-以及其他自定义数据params等等
+>以及其他自定义数据params等等
