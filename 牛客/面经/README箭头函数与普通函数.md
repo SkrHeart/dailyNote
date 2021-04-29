@@ -62,3 +62,32 @@ let getTempItem = id => { id: id, name: "Temp" };
 ```
 let fn = () => void doesNotReturn();
 ```
+## 箭头函数的特点
+### 1.箭头函数不会创建自己的this（重要！！！！）
+>箭头函数不会创建自己的this，所以它没有自己的this，它只会从自己的作用域链的上一层继承this。
+
+箭头函数没有自己的this，它会捕获自己在**定义**时（注意，是定义时，不是调用时）所处的**外层执行环境的this**，并继承这个this值。所以，箭头函数中this的指向在它被定义的时候就已经确定了，之后**永远**不会改变。  
+```
+var id = 'Global';
+
+function fun1() {
+    // setTimeout中使用普通函数
+    setTimeout(function(){
+        console.log(this.id);
+    }, 2000);
+}
+
+function fun2() {
+    // setTimeout中使用箭头函数
+    setTimeout(() => {
+        console.log(this.id);
+    }, 2000)
+}
+
+fun1.call({id: 'Obj'});     // 'Global'
+
+fun2.call({id: 'Obj'});     // 'Obj'
+```
+上面这个例子，函数fun1中的setTimeout中使用普通函数，2秒后函数执行时，这时函数其实是在全局作用域执行的，所以this指向Window对象，this.id就指向全局变量id，所以输出'Global'。
+但是函数fun2中的setTimeout中使用的是箭头函数，这个箭头函数的this在定义时就确定了，它继承了它外层fun2的执行环境中的this，而fun2调用时this被call方法改变到了对象{id: 'Obj'}中，所以输出'Obj'。
+
