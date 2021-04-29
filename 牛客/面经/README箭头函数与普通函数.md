@@ -112,5 +112,37 @@ obj.b();    // 'GLOBAL'
  ① JS内部首先会先生成一个对象  
  ② 再把函数中的this指向该对象  
  ③ 然后执行构造函数中的语句  
- ④ 最终返回该对象实例。
+ ④ 最终返回该对象实例。  
  **但是！！因为箭头函数没有自己的this，它的this其实是继承了外层执行环境中的this，且this指向永远不会随在哪里调用、被谁调用而改变，所以箭头函数不能作为构造函数使用，或者说构造函数不能定义成箭头函数，否则用new调用时会报错！**
+### 4.箭头函数没有自己的arguments
+箭头函数没有自己的arguments对象。在箭头函数中访问arguments实际上获得的是外层局部（函数）执行环境中的值
+```
+// 例子一
+let fun = (val) => {
+    console.log(val);   // 111
+    // 下面一行会报错
+    // Uncaught ReferenceError: arguments is not defined
+    // 因为外层全局环境没有arguments对象
+    console.log(arguments); 
+};
+fun(111);
+
+// 例子二
+function outer(val1, val2) {
+    let argOut = arguments;
+    console.log(argOut);    // ①
+    let fun = () => {
+        let argIn = arguments;
+        console.log(argIn);     // ②
+        console.log(argOut === argIn);  // ③
+    };
+    fun();
+}
+outer(111, 222);
+```
+可以使用 rest 参数代替。想要在箭头函数中以类似数组的形式取得所有参数，可以利用展开运算符来接收参数，比如：
+```
+const testFunc = (...args)=>{
+    console.log(args) //数组形式输出参数
+}
+```
