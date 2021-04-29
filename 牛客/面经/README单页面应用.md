@@ -1,5 +1,5 @@
-2021/4/29
-# 单页面应用（SinglePage Web Application，SPA）（美团）
+2021/4/29（美团）
+# 单页面应用（SinglePage Web Application，SPA）
 ![single](https://github.com/SkrHeart/dailyNote/blob/main/%E7%89%9B%E5%AE%A2/%E9%9D%A2%E7%BB%8F/single.png)
 >第一次进入页面时会请求一个html文件，刷新清除一下，切换到其他组件，此时路径也相应变化，但是并没有新的html文件请求，页面内容却变化了。
 
