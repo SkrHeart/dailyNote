@@ -146,3 +146,4 @@ const testFunc = (...args)=>{
     console.log(args) //数组形式输出参数
 }
 ```
+### 5.箭头函数没有原型prototype
