@@ -1,5 +1,5 @@
 # 普通函数
-# 箭头函数（参考链接：[掘金](https://juejin.cn/post/6844903805960585224)）
+# 箭头函数（参考链接：[掘金](https://juejin.cn/post/6844903805960585224),[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)）
 ## 一、基本语法
 ```
 // 箭头函数
