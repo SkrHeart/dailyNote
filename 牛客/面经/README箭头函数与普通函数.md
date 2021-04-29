@@ -8,7 +8,8 @@ let fun = (name) => {
     // 函数体
     return `Hello ${name} !`;
 };
-```|
+```
+|
 |
 |
 ```
