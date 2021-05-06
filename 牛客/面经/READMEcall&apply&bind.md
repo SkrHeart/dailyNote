@@ -26,3 +26,62 @@ var _fn = fn.bind(null, 10);
 //所以再次调用_fn时，只需要传入后两个参数即可
 var ans = _fn(20, 30); // 60
 ```
+## call()函数
+call() 方法调用一个函数, 其具有一个指定的this值和分别地提供的参数。
+该方法和apply()类似，区别在于，call()可以接收若干参数，而apply（）接收的是一个包含多个参数的数组。
+```
+语法：fun.call(thisArg, arg1, arg2, ...)
+```
+### call可以继承
+通过父类的构造函数call方法实现继承
+```
+function Product(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+  function Food(name, price) {
+    Product.call(this, name, price);
+    this.category = 'food';
+  }
+  var cheese = new Food('feta', 5);
+  console.log(cheese)
+  // Food { name: 'feta', price: 5, category: 'food' }
+```
+实例都会拥有在Product构造函数中添加的name属性和price属性,但category属性是在各自的构造函数中定义的
+### call方法调用匿名函数
+```
+var animals = [
+    { species: 'Lion', name: 'King' },
+    { species: 'Whale', name: 'Fail' }
+  ];
+  
+  for (var i = 0; i < animals.length; i++) {
+    (function(i) {
+        console.log('#' + i + ' ' + this.species + ': ' + this.name) }
+    ).call(animals[i], i);
+  }
+```
+for循环体内，我们创建了一个匿名函数，然后通过调用该函数的call方法，将每个数组元素作为指定的this值执行了那个匿名函数。
+### call方法指定上下文的this
+```
+function greet() {
+  var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
+  console.log(reply);
+}
+var obj = {
+  animal: 'cats', sleepDuration: '12 and 16 hours'
+};
+greet.call(obj);
+// cats typically sleep between 12 and 16 hours
+```
+### Call原理
+```
+Function.prototype.myCall = function(context) {
+   context = context ? Object(context) : window
+   context.fn = this
+   let args = [...arguments].slice(1)
+   let r = context.fn(args)
+   delete context.fn
+   return r
+}
+```
