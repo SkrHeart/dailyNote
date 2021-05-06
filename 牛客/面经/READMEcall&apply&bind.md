@@ -1,4 +1,6 @@
 2021/5/6(美团)
+# call、apply、bind的区别
+>call()、apply()、bind()方法的作用都是改变函数运行时this的指向。 bind() 是返回对应的函数，便于稍后调用；call()和apply()则是立即调用。
 ## 一、bind()函数
 bind()方法创建一个新函数, 在调用时设置this关键字为提供的值。
 >语法：function.bind(thisArg[, arg1[, arg2[, ...]]])  
