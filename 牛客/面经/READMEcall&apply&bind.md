@@ -1,5 +1,5 @@
 2021/5/6(美团)
-## bind()函数
+## 一、bind()函数
 >语法：function.bind(thisArg[, arg1[, arg2[, ...]]])  
 >thisArg 当绑定函数被调用时，该参数会作为原函数运行时的 this 指向。当使用 new 操作符调用绑定函数时，该参数无效。  
 >arg1, arg2, … （可选）当绑定函数被调用时，这些参数加上绑定函数本身的参数会按照顺序作为原函数运行时的参数
@@ -26,7 +26,7 @@ var _fn = fn.bind(null, 10);
 //所以再次调用_fn时，只需要传入后两个参数即可
 var ans = _fn(20, 30); // 60
 ```
-## call()函数
+## 二、call()函数
 call() 方法调用一个函数, 其具有一个指定的this值和分别地提供的参数。  
 该方法和apply()类似，区别在于，call()可以接收若干参数，而apply（）接收的是一个包含多个参数的数组。
 ```
@@ -84,4 +84,54 @@ Function.prototype.myCall = function(context) {
    delete context.fn
    return r
 }
+```
+## 三、apply()函数
+apply()调用一个指定this值的函数, 接收作为一个数组或者类数组对象提供的参数
+```
+语法： func.apply(thisArg, [argsArray])
+```
+### 1.apply将数组添加到另一个数组
+```
+var array = ['a', 'b'];
+var elements = [0, 1, 2];
+array.push.apply(array, elements);
+console.log(array); // ["a", "b", 0, 1, 2]
+```
+### 2.apply 找出最大值和最小值
+```
+var numbers = [5, 6, 2, 3, 7];
+var max = Math.max.apply(null, numbers)
+var min = Math.min.apply(null, numbers);
+```
+如果参数组非常大，将参数数组切块后，循环传入目标方法：
+```
+function minOfArray(arr) {
+    var min = Infinity;
+    var QUANTUM = 32768;
+  
+    for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
+      var submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
+      min = Math.min(submin, min);
+    }
+  
+    return min;
+  }
+  
+  var min = minOfArray([5, 6, 2, 3, 7]);
+  console.log(min) // 2
+
+```
+### 3.apply原理
+```
+Function.prototype.myApply = function(context) {
+  context = context ? Object(context) : window
+    context.fn = this
+    let args = [...arguments][1]
+    if (!args) {
+        return context.fn()
+    }
+    let r = context.fn(args)
+    delete context.fn;
+    return r
+ }
 ```
