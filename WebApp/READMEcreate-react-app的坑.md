@@ -24,7 +24,7 @@ const cssModuleRegex = /\.module\.(css|scss)$/;
 
 原因：typescript有类型定义，而react没有
 参考链接[为现有的React组件创建TypeScript类型](https://templecoding.com/blog/2016/03/31/creating-typescript-typings-for-existing-react-components)
->There are a lot of React components available on-line, and if you're using TypeScript with React, it can't sometimes be a little disappointing because many of those components don't have their type definitions.
+>There are a lot of React components available on-line, and if you're using TypeScript with React, it can't sometimes be a little disappointing because many of those components don't have their type definitions.  
 >在线上有很多React组件，如果您将TypeScript与React一起使用，有时会有些令人失望，因为其中许多组件都没有类型定义。
 
 1.首先执行
