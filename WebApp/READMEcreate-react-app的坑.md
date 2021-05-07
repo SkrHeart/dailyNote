@@ -42,3 +42,5 @@ yarn add @types/react-router-dom
 yarn add react-router-dom @types/react-router-dom
 ```
 **引入第三方库加@types/**
+>***为什么要下载@types/xxx包？***
+>你可能会遇到Could not find a declaration file for module 'xxx'的问题，这个问题是因为TypeScript还不认识相关包，要想让typescript认识他们，就要下载相应的@types/xxx包
