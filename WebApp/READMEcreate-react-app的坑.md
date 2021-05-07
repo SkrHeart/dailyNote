@@ -25,8 +25,9 @@ const cssModuleRegex = /\.module\.(css|scss)$/;
 原因：typescript有类型定义，而react没有
 参考链接[为现有的React组件创建TypeScript类型](https://templecoding.com/blog/2016/03/31/creating-typescript-typings-for-existing-react-components)
 >There are a lot of React components available on-line, and if you're using TypeScript with React, it can't sometimes be a little disappointing because many of those components don't have their type definitions.  
->在线上有很多React组件，如果您将TypeScript与React一起使用，有时会有些令人失望，因为其中许多组件都没有类型定义。
-
+>在线上有很多React组件，如果您将TypeScript与React一起使用，有时会有些令人失望，因为其中许多组件都没有类型定义。  
+>***为什么要下载@types/xxx包？***  
+>你可能会遇到Could not find a declaration file for module 'xxx'的问题，这个问题是因为TypeScript还不认识相关包，要想让typescript认识他们，就要下载相应的@types/xxx包
 1.首先执行
 ```
 yarn add react-router-dom
@@ -42,5 +43,4 @@ yarn add @types/react-router-dom
 yarn add react-router-dom @types/react-router-dom
 ```
 **引入第三方库加@types/**
->***为什么要下载@types/xxx包？***
->你可能会遇到Could not find a declaration file for module 'xxx'的问题，这个问题是因为TypeScript还不认识相关包，要想让typescript认识他们，就要下载相应的@types/xxx包
+
