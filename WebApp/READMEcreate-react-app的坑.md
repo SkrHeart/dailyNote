@@ -19,11 +19,10 @@ const cssRegex = /\.(css|scss)$/;
 const cssModuleRegex = /\.module\.(css|scss)$/;
 ```
 ## 2.使用react-router-dom(已解决)
-1.首先执行
+1.首先执行:point_down:安装react路由 
 ```
 yarn add react-router-dom
 ```
-安装react路由  
 新创建的项目使用react-router-dom会报如下错误
 >Typescript react - Could not find a declaration file for module ''react-router-dom'. 'path/to/module-name.js' implicitly has an any type
 
