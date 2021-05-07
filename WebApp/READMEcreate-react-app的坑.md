@@ -34,12 +34,11 @@ yarn add react-router-dom
 >***为什么要下载@types/xxx包？***  
 >你可能会遇到Could not find a declaration file for module 'xxx'的问题，这个问题是因为TypeScript还不认识相关包，要想让typescript认识他们，就要下载相应的@types/xxx包
 
-2.然后执行
+2.然后执行:point_down:填加依赖 
 ```
 yarn add @types/react-router-dom
 ```
-填加依赖  
-**下次直接这样**
+**下次直接这样**:point_down:
 ```
 yarn add react-router-dom @types/react-router-dom
 ```
