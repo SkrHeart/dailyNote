@@ -36,6 +36,9 @@ yarn add react-router-dom
 ```
 yarn add @types/react-router-dom
 ```
-填加依赖
-**下次直接这样yarn add react-router-dom @types/react-router-dom**  
+填加依赖  
+**下次直接这样**
+```
+yarn add react-router-dom @types/react-router-dom
+```
 **引入第三方库加@types/**
