@@ -1,4 +1,5 @@
-# create-react-app创建新项目时使用sass的坑（未解决）
+# create-react-app创建新项目的坑
+## 1.使用sass(未解决)
 ### 暂时解决方法
 1.使用
 ```
@@ -17,3 +18,8 @@ const cssModuleRegex = /\.module\.css$/;
 const cssRegex = /\.(css|scss)$/;
 const cssModuleRegex = /\.module\.(css|scss)$/;
 ```
+## 2.使用react-router-dom(已解决)
+首先执行
+```
+yarn add react-router-dom
+```安装react路由
