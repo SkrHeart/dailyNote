@@ -1,7 +1,17 @@
 2021.5.7
 # create-react-app创建新项目的坑
-## 1.使用sass(未解决)
-### 暂时解决方法
+## 1.使用sass(已解决)
+### 解决方法
+产生原因：create-react-app拉取的项目模板中的package.json文件中，无:point_down:依赖
+```
+"node-sass": "^5.0.0",
+"sass-loader": "^11.0.1",
+```
+需使用:point_down:进行下载对应的modules，package.json会自动填加:point_up:依赖,所以完美解决
+```
+yarn add node-sass sass-loader
+```
+### 暂时解决方法(不可行:x:)
 ***此方法只能使项目编译成功，但是不支持sass写法，无法识别到scss文件中的sass写法***  
 1.使用
 ```
