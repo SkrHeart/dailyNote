@@ -2,6 +2,7 @@
 # create-react-app创建新项目的坑
 ## 1.使用sass(未解决)
 ### 暂时解决方法
+***此方法只能使项目编译成功，但是不支持sass写法，无法识别到scss文件中的sass写法***
 1.使用
 ```
 yarn eject
