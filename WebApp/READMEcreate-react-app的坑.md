@@ -57,6 +57,10 @@ yarn add react-router-dom @types/react-router-dom
 ```
 **引入第三方库加@types/**
 ## 3.使用路由跳转
+参考链接
+>[CSDN:解决报错Cannot read property 'push' of undefined](https://blog.csdn.net/zrq1210/article/details/109381692)
+>[思否:使用React的this.props.history.push()报错解决方案](https://segmentfault.com/a/1190000022272003)
+
 在当前页面使用:point_down:跳转，会报错*TypeError: Cannot read property 'push' of undefined*
 ```
 this.props.history.push('/second')
