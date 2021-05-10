@@ -95,7 +95,7 @@ import {withRouter} from "react-router-dom";
 //...
 export default withRouter(Index) ;
 ```
-### 解决方法2（未用,未成功）
+### 解决方法2（可以）
 在当前组件的父组件中给当前组件传一个history
 ```
 <Index history={this.props.history} />
