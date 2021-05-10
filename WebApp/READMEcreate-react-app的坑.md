@@ -56,4 +56,35 @@ yarn add @types/react-router-dom
 yarn add react-router-dom @types/react-router-dom
 ```
 **引入第三方库加@types/**
-
+## 3.使用路由跳转
+在当前页面使用:point_down:跳转，会报错*TypeError: Cannot read property 'push' of undefined*
+```
+this.props.history.push('/second')
+```
+**情景复现**
+```
+class Index extends Component<any> {
+    navToUrl = ()=>{
+        this.props.history.push('/second')
+    }
+    render() {
+        // console.log(this.props)
+        return (
+            <div className='index'>
+                <div className='index_btn'>按钮</div>
+                aaaaaa
+                <div onClick={this.navToUrl}>点我跳转</div>
+                <Route exact={true} path={'/second'} component={Second}/>
+            </div>
+        );
+    }
+}
+export default Index ;
+```
+### 解决方法1
+在export default时加withRouter()
+```
+import {withRouter} from "react-router-dom";
+//...
+export default withRouter(Index) ;
+```
