@@ -39,7 +39,7 @@ yarn add react-router-dom
 新创建的项目使用react-router-dom会报如下错误
 >Typescript react - Could not find a declaration file for module ''react-router-dom'. 'path/to/module-name.js' implicitly has an any type
 
-原因：typescript有类型定义，而react没有
+原因：typescript有类型定义，而react没有  
 参考链接[为现有的React组件创建TypeScript类型](https://templecoding.com/blog/2016/03/31/creating-typescript-typings-for-existing-react-components)
 >There are a lot of React components available on-line, and if you're using TypeScript with React, it can't sometimes be a little disappointing because many of those components don't have their type definitions.  
 >在线上有很多React组件，如果您将TypeScript与React一起使用，有时会有些令人失望，因为其中许多组件都没有类型定义。  
@@ -58,7 +58,7 @@ yarn add react-router-dom @types/react-router-dom
 **引入第三方库加@types/**
 ## 3.使用路由跳转
 参考链接
->[CSDN:解决报错Cannot read property 'push' of undefined](https://blog.csdn.net/zrq1210/article/details/109381692)
+>[CSDN:解决报错Cannot read property 'push' of undefined](https://blog.csdn.net/zrq1210/article/details/109381692)  
 >[思否:使用React的this.props.history.push()报错解决方案](https://segmentfault.com/a/1190000022272003)
 
 在当前页面使用:point_down:跳转，会报错*TypeError: Cannot read property 'push' of undefined*
