@@ -6,3 +6,8 @@
 yarn global remove @tarojs/cli
 
 ```
+**安装傻逼taro**
+```
+//使用yarn
+yarn global add @tarojs/cli@版本
+```
