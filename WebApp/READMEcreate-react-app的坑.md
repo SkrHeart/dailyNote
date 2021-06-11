@@ -4,10 +4,12 @@
 ### 解决方法
 产生原因：create-react-app拉取的项目模板中的package.json文件中，无:point_down:依赖
 ```
+"@types/node-sass": "^4.11.1",
 "node-sass": "^5.0.0",
 "sass-loader": "^11.0.1",
 ```
 需使用:point_down:进行下载对应的modules，package.json会自动填加:point_up:依赖,所以完美解决
+**还需手动添加"@types/node-sass": "^4.11.1"**
 ```
 yarn add node-sass sass-loader
 ```
