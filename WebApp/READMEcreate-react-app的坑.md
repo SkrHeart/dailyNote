@@ -101,3 +101,10 @@ export default withRouter(Index) ;
 ```
 <Index history={this.props.history} />
 ```
+2021/6/11  
+1.使用create-react-app新建typescript项目  
+```
+yarn create react-app 项目名字 --template typescript
+```
+2.create-react-app新创建项目，使用yarn eject进行暴露webpack配置时报错  
+解决方法：将项目提交git即可解决  
