@@ -17,3 +17,5 @@ eg4: 经典 setTime/promise
     最后主线程的任务搞完了，才会去执行task queue中的任务。 
     所以最后执行1
 ```
+## 2.defer & async 的区别[参考链接](https://www.jianshu.com/p/456c0b677e8c)  
+## 3.浏览器的异步处理队列？（宏任务和微任务，具体有哪些？）[参考链接](https://segmentfault.com/a/1190000022950333)
