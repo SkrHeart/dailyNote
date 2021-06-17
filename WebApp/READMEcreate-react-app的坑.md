@@ -9,12 +9,12 @@
 "sass-loader": "^11.0.1",
 ```
 需使用:point_down:进行下载对应的modules，package.json会自动填加:point_up:依赖,所以完美解决  
-~~**还需手动添加"@types/node-sass": "^4.11.1"**~~
+**~~还需手动添加"@types/node-sass": "^4.11.1"~~**
 ```
 yarn add node-sass sass-loader @types/node-sass
 ```
 ***此方法可以使用 import 'path/xxx.scss'但是不可以使用import styles from 'path/xxx.scss'*** 
-~~### 暂时解决方法(不可行:x:)~~
+### ~~暂时解决方法(不可行:x:)~~
 ***此方法只能使项目编译成功，但是不支持sass写法，无法识别到scss文件中的sass写法***  
 1.使用
 ```
