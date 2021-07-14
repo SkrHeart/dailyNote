@@ -10,7 +10,7 @@ for in 和 for of 的区别
 >无论是for...in还是for...of语句都是迭代一些东西。它们之间的主要区别在于它们的迭代方式。  
 >for...in语句以任意顺序迭代对象的可枚举属性。  
 >for...of 语句遍历可迭代对象定义要迭代的数据。  
->以下示例显示了与Array一起使用时，for...of循环和for...in循环之间的区别。  
+以下示例显示了与Array一起使用时，for...of循环和for...in循环之间的区别。  
 ```
 Object.prototype.objCustom = function() {}; 
 Array.prototype.arrCustom = function() {};
