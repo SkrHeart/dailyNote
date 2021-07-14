@@ -4,12 +4,17 @@ for in 和 for of 的区别
 **一句话概括：for in是遍历（object）键名，for of是遍历（array）键值。**
 # 1.for...in  
 >for...in 循环只遍历可枚举属性（包括它的原型链上的可枚举属性）。像 Array和Object使用内置构造函数所创建的对象都会继承自Object.prototype和String.prototype的不可枚举属性，例如 String 的 indexOf()  方法或 Object的toString()方法。循环将遍历对象本身的所有可枚举属性，以及对象从其构造函数原型中继承的属性（更接近原型链中对象的属性覆盖原型属性）。  
+
+for...in 循环不仅遍历数字键名，还会遍历手动添加的其它键，甚至包括原型链上的键。for...of 则不会这样
 # 2.for..of  
 >for...of语句在可迭代对象（包括Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句  
+
+对于普通对象，没有部署原生的 iterator 接口，直接使用 for...of 会报错
 # 3.for...of与for...in的区别  
 >无论是for...in还是for...of语句都是迭代一些东西。它们之间的主要区别在于它们的迭代方式。  
 >for...in语句以任意顺序迭代对象的可枚举属性。  
->for...of 语句遍历可迭代对象定义要迭代的数据。  
+>for...of 语句遍历可迭代对象定义要迭代的数据。
+  
 以下示例显示了与Array一起使用时，for...of循环和for...in循环之间的区别。  
 ```
 Object.prototype.objCustom = function() {}; 
@@ -33,10 +38,12 @@ for (let i of iterable) {
 }
 ```
 # 总结：for in 一般用来遍历对象的key、for of 一般用来遍历数组的value
+for...in 循环：只能获得对象的键名，不能获得键值  
+for...of 循环：允许遍历获得键值
 
-
-
-
+# 补充
+forEach 循环无法中途跳出，break 命令或 return 命令都不能奏效  
+for...of 循环可以与break、continue 和 return 配合使用，跳出循环
 
 
 
