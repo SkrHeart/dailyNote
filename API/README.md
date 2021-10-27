@@ -1,7 +1,7 @@
 # Array APIs
-### 1.[MDN  Array.from()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 
+## 1.[MDN  Array.from()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 
 方法从一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例 
-### 2.[MDN  Array.prototype.reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+## 2.[MDN  Array.prototype.reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 reduce() 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。  
 
 **reducer 函数接收4个参数:**
@@ -15,6 +15,7 @@ reduce() 方法对数组中的每个元素执行一个由您提供的reducer函�
 arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
 ```
 您的 reducer 函数的返回值分配给累计器，该返回值在数组的每个迭代中被记住，并最后成为最终的单个结果值。  
+
 **参数**
 ```
 callback
