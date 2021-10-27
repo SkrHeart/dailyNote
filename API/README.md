@@ -4,10 +4,11 @@
 ### 2.[MDN  Array.prototype.reduce()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 reduce() 方法对数组中的每个元素执行一个由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。  
 **reducer 函数接收4个参数:**
->Accumulator (acc) (累计器)
->Current Value (cur) (当前值)
->Current Index (idx) (当前索引)
->Source Array (src) (源数组)
+>Accumulator (acc) (累计器)  
+>Current Value (cur) (当前值)  
+>Current Index (idx) (当前索引)  
+>Source Array (src) (源数组)  
+
 **语法**
 ```
 arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
@@ -32,9 +33,9 @@ initialValue可选
 函数累计处理的结果
 **描述**  
 reduce为数组中的每一个元素依次执行callback函数，不包括数组中被删除或从未被赋值的元素，接受四个参数：
->accumulator 累计器
->currentValue 当前值
->currentIndex 当前索引
+>accumulator 累计器  
+>currentValue 当前值  
+>currentIndex 当前索引  
 >array 数组
 
 >注意：回调函数第一次执行时，accumulator 和currentValue的取值有两种情况：如果调用reduce()时提供了initialValue，accumulator取值为initialValue，currentValue取数组中的第一个值；如果没有提供 initialValue，那么accumulator取数组中的第一个值，currentValue取数组中的第二个值。
