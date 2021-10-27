@@ -1,6 +1,6 @@
 # 目录
 1.[from](#1mdn--arrayfrom)
-2.[reduce](#2mdn--arrayprototypereducereduce)
+2.[reduce](#2mdn--arrayprototypereduce)
 
 # Array APIs
 ## 1.[MDN  Array.from()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 
